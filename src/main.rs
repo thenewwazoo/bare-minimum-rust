@@ -31,22 +31,8 @@ extern "C" {
 #[link_section=".vectors"]
 #[allow(non_upper_case_globals)]
 #[no_mangle]
-pub static ISRVectors: [Option<unsafe extern "C" fn()>; 16] = [Some(_estack), // Stack pointer
+pub static ISRVectors: [Option<unsafe extern "C" fn()>; 2] = [Some(_estack), // Stack pointer
                                                                Some(startup), // Reset
-                                                               None, // Reserved
-                                                               None, // Reserved
-                                                               None, // Reserved
-                                                               None, // Reserved
-                                                               None, // Reserved
-                                                               None, // Reserved
-                                                               None, // Reserved
-                                                               None, // Reserved
-                                                               None, // Reserved
-                                                               None, // Reserved
-                                                               None, // Reserved
-                                                               None, // Reserved
-                                                               None, // Reserved
-                                                               None, // Reserved
 ];
 
 
