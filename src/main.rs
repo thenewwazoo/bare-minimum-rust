@@ -51,9 +51,7 @@ pub static ISRVectors: [Option<unsafe extern "C" fn()>; 16] = [Some(_estack), //
 
 #[start]
 fn lang_start(_: isize, _: *const *const u8) -> isize {
-    unsafe {
-        startup();
-    }
+    main();
     0
 }
 
